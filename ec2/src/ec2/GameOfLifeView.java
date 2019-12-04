@@ -134,6 +134,14 @@ public class GameOfLifeView extends JPanel{
 	
 		
 	}
+	public JButton getStartButton() {
+		for (Component c : buttonPanel.getComponents()) {
+			JButton j = (JButton)c;
+			if (j.getName().charAt(0) == 'S')
+				return j;
+		}
+		return null;
+	}
 	public LargeMouseView getLargeMouseView() {
 		return (LargeMouseView)board;
 	}
